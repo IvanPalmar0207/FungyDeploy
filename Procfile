@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn Proyecto_fungy.wsgi
+web: python manage.py collectstatic && gunicorn Proyecto_fungy.wsgi
