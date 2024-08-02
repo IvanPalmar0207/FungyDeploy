@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ENVIRONMENT = os.getenv('ENVIRONMENT', default='production')
+#ENVIRONMENT = os.getenv('ENVIRONMENT', default='production')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -140,10 +140,10 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 MEDIA_URL = '/media/'
 
-if ENVIRONMENT == 'production': 
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-else:
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#if ENVIRONMENT == 'production': 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#else:
+    #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.getenv('CLOUD_NAME'),
