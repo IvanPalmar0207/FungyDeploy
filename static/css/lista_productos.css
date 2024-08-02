@@ -1,0 +1,92 @@
+
+@font-face{
+    font-family: "paso";
+    src: url("../fonts/The Constellation.ttf");
+}
+
+@font-face{
+    font-family: "titulo";
+    src: url("../fonts/calibri-bold.ttf");
+}   
+
+
+#img_fondos{
+    background-image: url('../img/fondo_ventas.jpg');
+    width: 100%;
+    height: auto;
+    margin-top: -30px;
+    padding: 50px;
+}
+      
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Crea cuatro columnas de igual ancho */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center;
+    height: auto;
+}
+.card {
+    width: 300px; /* Ancho de la tarjeta */
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra de la tarjeta */
+    margin-bottom: 16px; /* Espacio debajo de la tarjeta */
+    text-align: center;
+    height: auto;
+    padding: 15px;
+    padding-bottom: 60px;
+}
+
+.card-info{
+    height: 50%;
+}
+
+.card h2{
+    font-size: 25px;
+    color: #8E5A37;
+    height: 35%;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.card p{
+    font-size: 18px;
+    height: 15%;
+    margin-top: 15px;
+    color: #8E5A37;
+    font-weight: 400;
+}
+.card img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 100%;
+}
+
+.card img {
+    width: 100%; /* Ancho fijo para todas las imágenes */
+    height: 250px; /* Altura fija para todas las imágenes */
+    object-fit: fill; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.ver-mas {
+    background-color: #8E5A37; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano al pasar por encima */
+    margin-top: 10px;
+    font-weight: bold;
+    width: 50%;
+}
+
+.ver-mas:hover {
+    background-color: #db9719;; /* Color de fondo al pasar el mouse por encima */
+}
+
+
+.titulo{
+    color: #8E5A37;
+    text-align:center ;
+    font-family: "titulo";
+    margin-top: 30px;
+}

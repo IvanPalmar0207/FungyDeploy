@@ -1,0 +1,18 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/productos.css' %}" />
+
+<header class="navbar">
+    <img class="logo" src="{% static 'img/logo1.1.svg' %}" alt="logo">
+    <a href="{% url 'index' %}" class="btn Inicio">Inicio</a>
+    <a href="{% url 'listar_productos' %}" class="btn">Productos</a>
+    <a href="{% url 'paso_paso' %}" class="btn">Paso a paso</a>
+    <a href="{% url 'capacitaciones' %}" class="btn">Capacitaciones</a>
+    <a href="{% url 'conocenos' %}" class="btn">Conocenos</a>
+    <a href="{% url 'blog' %}" class="btn">Blog</a>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'exit' %}" class="login">Salir</a>
+    {% else %}
+        <a href="{% url 'login' %}" class="login">Ingresar</a> 
+    {% endif %}
+</header>

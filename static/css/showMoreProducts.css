@@ -1,0 +1,102 @@
+.containerShow{
+    background-image: url('../img/fondo_ventas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.containerAboutProduct{
+    width: 70%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin: 100px;
+    margin-bottom: 140px;
+    border-top-left-radius: 150px; 
+    padding: 70px;
+    box-shadow: 5px 6px 20px 10px rgb(209, 209, 209);
+    display: flex;
+}
+
+.containerImageProduct{
+    width: 50%;
+}
+
+.imageAboutP{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 100px; 
+}
+
+.containerInfoProduct{
+    width: 50%;
+    padding-left: 70px;
+    height: 100%;
+    padding-top: 0px;
+}
+
+.containerInfoProduct h2{
+    color: #8E5A37;
+    font-weight: bold;
+}
+
+.containerInfoProduct p{
+    margin-top: 30px;
+    font-size: larger;
+}
+
+.containerInfoProduct h4{
+    color: #8E5A37;
+    margin-top: 30px;
+}
+
+.containerButton{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.containerButton a{
+    background-color:#ef8420;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 30px;
+    opacity: 0.9;
+}
+
+.containerButton a:hover{
+    transition: all ease-in 0.5s;
+    opacity: 1;
+    background-color: black;
+}
+
+@media (max-width: 900px) {
+    .containerAboutProduct{
+        display: block;
+        padding: 40px;
+        margin: 50px;
+    }
+    .containerImageProduct{
+        width: 100%;
+    }
+
+    .containerInfoProduct{
+        width: 100%;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .containerInfoProduct h2,h4{
+        font-size: medium;
+    }
+    .containerInfoProduct p{
+        font-size: medium
+    }
+    .containerButton a{
+        font-size: medium;
+    }
+}

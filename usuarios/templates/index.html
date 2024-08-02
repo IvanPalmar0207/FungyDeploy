@@ -1,0 +1,337 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/productos.css' %}">
+    <link rel="shortcut icon" href="../static/img/logo1.1.svg" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>  
+
+#img_fondo{
+    background-image: url('{% static "img/fondo_ventas.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+}
+
+.containerUserName{
+    display: flex;
+    justify-content: end;
+    padding-right: 60px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: larger;
+    color: #8E5A37;
+}
+
+.containerUserName span{
+    color: #ef8420;
+    margin-left: 1%;
+}
+
+.sideBar{
+    width: 4%;
+    top: 40%;
+    left: 96%;    
+    background-color: #ef8420;
+    position: fixed;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0.9;
+    transition: all;
+}
+
+.sideBar .iconNet{
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.sideBar:hover{
+    background-color:#8E5A37;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.iconCarousel{
+    background-color: #8E5A37;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.carousel{
+    padding: 20px;
+}
+
+#miBoton{
+    background-color: #ef8420;    
+    color: white;
+    font-size: 60px;
+    border: none;
+    width: 5%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.contactanos{
+    margin-top: 2%;
+}
+
+.formMessage{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px;
+}
+
+.formMessage label{
+    display: block;
+    text-align: start;
+    color: #8E5A37;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 5%;
+}
+
+.containerForm{
+    margin-top: -80px;
+}
+
+.contactanos{
+    text-align: center;
+    color: #8E5A37;
+    margin-top: 100px;
+    font-family: 'titulo';
+}
+
+.containerInput{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInput i{
+    color: #8E5A37;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2.5em;
+}
+
+.containerInput .style{
+    width: 100%;
+    height: 100%;
+    padding-left: 3%;
+    margin-left: 3%;
+    border-left: 2px solid #8E5A37;
+    margin-top: 15px;
+}
+
+.style input{
+    width: 100%;
+    height: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #8E5A37;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.containerInputs{
+    width: 40%;
+    padding: 50px;
+}
+
+.containerText{
+    width: 31%;
+    margin-top: 10px;
+}
+
+.containerText textarea{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 40px;
+    padding: 30px;
+}
+
+.containerButton{
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 120px;
+}
+
+.containerButton input{
+    padding: 15px;
+    width: 8%;
+    border-radius: 30px;
+    border: none;
+    font-weight: bolder;
+    color: white;
+    background-color: #ef8420;
+}
+
+.containerButton input:hover{
+    transition: all ease-in 0.5s;
+    background-color: black;
+}
+
+</style>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div id="img_fondo">
+
+        {% if request.user.is_authenticated%}
+            <div class="containerUserName">
+                <i class="bi bi-person-circle"></i><span>{{user.username | upper}}</span>
+            </div>
+        {% endif %}
+        
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'img/slider1.1.png' %}" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/slider1.3.png' %}" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/slider1.4.png' %}" class="d-block w-100">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon iconCarousel" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon iconCarousel" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div id="miBotonContainer">
+            <button id="miBoton"><i class="bi bi-arrow-down-circle-fill"></i></button>
+        </div>
+
+        <!-- Aquí está la sección que agregué -->
+        <div id="miSeccion" class="container" style="display: none">
+            <div class="card">
+                <figure>
+                    <img src="{% static 'img/producto1.png' %}" alt="plantas y muebles">
+                </figure>
+                <div class="contenido">
+                    <h3>NOMBRE DEL PRODUCTO</h3>
+                    <p>PRECIO DE ESTE PRODUCTO $$</p>
+                    <a href="{% url 'listar_productos' %}">Ver Más</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="{% static 'img/producto2.png' %}" alt="plantas y muebles">
+                </figure>
+                <div class="contenido">
+                    <h3>NOMBRE DEL PRODUCTO</h3>
+                    <p>PRECIO DE ESTE PRODUCTO $$</p>
+                    <a href="{% url 'listar_productos' %}">Ver Más</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="{% static 'img/producto1.png' %}" alt="plantas y muebles">
+                </figure>
+                <div class="contenido">
+                    <h3>NOMBRE DEL PRODUCTO</h3>
+                    <p>PRECIO DE ESTE PRODUCTO $$</p>
+                    <a href="{% url 'listar_productos' %}">Ver Más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sideBar">
+            <div class="iconNet">
+                <a href="https://www.facebook.com/TejidoFungi?mibextid=kFxxJD" target="_blank" rel="noopener noreferrer" class="iconNet"><i class="bi bi-facebook"></i></a>
+            </div>
+            <div class="iconNet">
+                <a href="https://www.instagram.com/tejidofungi?igsh=MXY4c2R4Zzc3N2xoZg==" target="_blank" rel="noopener noreferrer" class="iconNet"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="iconNet">
+                <a href="" target="_blank" rel="noopener noreferrer" class="iconNet"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerContact">
+        <div class="contactanos">
+            <h2>Asesoramiento de nuevos fungicultores</h2>
+        </div>
+        
+        <div class="containerForm">
+            <form action="{% url 'contact' %}" method="POST" name="formSuggest" onsubmit="return validate()">
+                {% csrf_token %}                
+
+                <div class="formMessage">
+                    <div class="containerInputs">
+                        <label for="fullName">Nombre Completo</label>
+                        <div class="containerInput"><i class="bi bi-person-circle"></i><div class="style"><input name="contactFullName" type="text" placeholder="Introduzca su nombre" required></div></div>
+                        
+                        <label for="email">Correo Electronico</label>
+                        <div class="containerInput"><i class="bi bi-envelope-check-fill"></i><div class="style"><input name="emailContact" type="text" placeholder="Introduzca su correo electronico" required></div></div>  
+                        
+                        <label for="phone">Telefono de contacto</label>
+                        <div class="containerInput"><i class="bi bi-phone"></i><div class="style"><input name="phoneContact" type="text" placeholder="Introduzca su telefono" required></div></div>
+                    </div> 
+
+                    <div class="containerText">
+                        <label for="phoneContact">Escribe tus sugerencias</label>
+                        <textarea id="messageUser" name="messageUser" rows="12"></textarea>
+                    </div>
+                </div>
+
+                <div class="containerButton">
+                    <input type="submit" value="Enviar">
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    {% include 'footer.html' %}
+
+    <!--Validation-->
+    <script src="{% static 'js/validationIndex.js' %}"></script>
+    <!--CDN de SweetAlert-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.5/sweetalert2.all.min.js"></script>
+    <!--CDN de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Window Script-->
+    <script src="{% static 'js/vennta.js' %}"></script>
+    <!--SweetAlert-->
+    {% if messages %}
+        {% for i in messages %}
+            <script>
+                Swal.fire({
+                    "title": "Felicitaciones",
+                    "text" : "{{i}}",
+                    "icon" : "success",
+                    "confirmButtonColor" : " #93ca00"
+                })
+            </script>                
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
