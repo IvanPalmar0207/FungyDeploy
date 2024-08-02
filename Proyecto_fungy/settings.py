@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 import os
-from pathlib import Path
-
+from pathlib import Pathff
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -81,12 +80,8 @@ WSGI_APPLICATION = 'Proyecto_fungy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',  
-        'USER': 'root',                  
-        'PASSWORD': 'NNpMqXbaskTdGvSFwEzGyzZQKhIALQZU',           
-        'HOST': 'mysql.railway.internal',                   
-        'PORT': '3306',                        
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',                
     }
 }
 
