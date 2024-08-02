@@ -78,18 +78,14 @@ WSGI_APPLICATION = 'Proyecto_fungy.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
-    #    'ENGINE': 'django.db.backends.mysql',
-    #   'NAME': 'base_fungy',  # Reemplaza con el nombre de tu base de datos
-    #    'USER': 'root',                  # Reemplaza con tu nombre de usuario
-    #    'PASSWORD': '',           # Reemplaza con tu contraseña
-    #    'HOST': 'localhost',                   # O la dirección IP del servidor MySQL
-    #    'PORT': '3306',                        # El puerto por defecto de MySQL
-    #    'OPTIONS': {
-    #        'charset': 'utf8mb4',
-    #        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-    #    },
-    #}
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',  
+        'USER': 'root',                  
+        'PASSWORD': 'NNpMqXbaskTdGvSFwEzGyzZQKhIALQZU',           
+        'HOST': 'mysql.railway.internal',                   
+        'PORT': '3306',                        
+    }
 }
 
 # Password validation
