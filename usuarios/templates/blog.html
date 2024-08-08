@@ -14,10 +14,8 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="{% static 'css/productos.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
-    
+    />  
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favIcon.jpg' %}" type="image/x-icon">
     <title>Blog</title>
     <style>  
@@ -87,50 +85,65 @@
         </div>
       </div>
 
-      <div class="titulo">
-        <h1>Articulos</h1>
-        <h2>que te pueden interesar</h2>
+
+      <div class="containerBlog">
+        <div class="titleBlog">
+          <h1>Articulos</h1>
+          <h2>que te pueden interesar</h2>
+        </div>
+  
+        <div>
+          <div class="containerFirst"> 
+            <div class="contentContainer">
+              <img src="{% static 'img/blog_1.jpeg' %}" alt="Imagen1">
+              <h6>21/10/2022</h6>
+              <p>Ataúd ecológico: funeraria ofrece la alternativa hecha con  hongos</p>
+              <div class="containerShow">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver más</a>
+              </div>
+            </div>
+  
+            <div class="contentContainer">
+              <img src="{% static 'img/blog_2.jpeg' %}" alt="Imagen1">
+              <h6>20/01/2021</h6>
+              <p>Hormigas granjeras, una fabrica subterránea de medicamentos.</p>
+              <div class="containerShow">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver más</a>
+              </div>
+            </div>
+  
+            <div class="contentContainer">
+              <img src="{% static 'img/blog_3.jpeg' %}" alt="Imagen1">
+              <h6>29/03/2019</h6>
+              <p>El hongo asesino de 500 especies de anfibios</p>
+              <div class="containerShow">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver más</a>
+              </div>
+            </div>
+          </div>            
+            
+          <div class="containerFirst">
+            <div class="contentContainer">
+              <img src="{% static 'img/blog_4.jpeg' %}" alt="Imagen1">
+              <h6>20/01/2023</h6>
+              <p>¿Podría evolucionar un hongo parásito para controlar a los humanos?</p>
+              <div class="containerShow">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver más</a>
+              </div>
+            </div>
+
+            <div class="contentContainer">
+              <img src="{% static 'img/blog_2.jpeg' %}" alt="Imagen1">
+              <h6>01/02/2024</h6>
+              <p>Cola de pavo, chaga, melena de león... ¿Ayudan realmente estos suplementos de hongos?</p>
+              <div class="containerShow">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver más</a>
+              </div>
+            </div>
+          </div>
+      </div>        
       </div>
-      <div id="miSeccion">
-        <div class="card">
-            <figure>
-                <img src="{% static 'img/blog_1.jpeg' %}" alt="plantas y muebles">
-            </figure>
-            <div class="contenido">
-                <h3>21/10/2022</h3>
-                <p>Ataúd ecológico: funeraria
-                  ofrece esta alternativa hecha
-                  con hongos.</p>
-                <a href="">Ver Más</a>
-            </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="{% static 'img/blog_2.jpeg' %}"  alt="plantas y muebles">
-            </figure>
-            <div class="contenido">
-                <h3>20/01/2021</h3>
-                <p>Hormigas granjeras, una fabrica
-                  subterránea de medicamentos.</p>
-                <a href="">Ver Más</a>
-            </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="{% static 'img/blog_3.jpeg' %}" alt="plantas y muebles">
-            </figure>
-            <div class="contenido">
-                <h3>29/03/2019</h3>
-                <p>El hongo asesino de 500 especies
-                  de anfibios.</p>
-                <a href="">Ver Más</a>
-            </div>
-        </div>
-    </div>
-
-
-    <div>
-      {% include 'footer.html' %}
-    </div>
+          
+        {% include 'footerFungi.html' %}        
   </body>
 </html>

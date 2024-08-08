@@ -1,187 +1,120 @@
 @font-face{
-    font-family: "titulo";
-    src: url("../fonts/calibri-bold.ttf");
+    font-family: "mainTitles";
+    src: url("../fonts/The Constellation.ttf");
 }
 
 @font-face{
-  font-family: "paso";
-  src: url("../fonts/The Constellation.ttf");
+    font-family: "subtitles";
+    src: url("../fonts/calibri-bold.ttf");
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+.containerBlog{
+    background-image: url('../img/backgroundMain.jpg');
+    background-repeat: repeat;
+    padding: 100px;
+    padding-left: 200px;
+    padding-right: 200px;    
 }
 
-#fondo_blog {
-    position: relative;
-    background-image: url('../img/fondo_ventas.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-}
-.containerUserName{
-    display: flex;
-    justify-content: end;
-    padding-right: 60px;
-    padding-top: 20px;
-    margin-bottom: -50px;
-    font-weight: bold;
+.titleBlog h1{
+    font-family: 'mainTitles';
+    color: #8E5A37;
     font-size: larger;
+    font-size: 4em;
+}
+
+.titleBlog h2{
+    font-family: "subtitles";
     color: #8E5A37;
-}
-.containerUserName span{
-    color: #ef8420;
-    margin-left: 1%;
+    font-size: 2.5em;
 }
 
-.sideBar{
-    width: 4%;
-    top: 40%;
-    left: 96%;    
-    background-color: #ef8420;
-    position: fixed;
-    text-align: center;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    opacity: 0.9;
-    transition: all;
+.containerFirst{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
 }
 
-.sideBar .iconNet{
-    font-size: 30px;
-    margin-top: 35px;
-    margin-bottom: 30px;
-    color: white;
+.contentContainer{
+    padding: 35px;
+    padding-bottom: 50px;
+    background-color: white;
+    width: 28%;
+    border-top-left-radius: 60px;
+    box-shadow: 0px 5px 15px 7px rgb(197, 197, 197);
 }
 
-.sideBar:hover{
-    background-color:#8E5A37;
+.contentContainer:hover{
     transition: all ease-in-out 0.3s;
-    cursor: pointer;
-}
-
-.titulo{
-    position: relative;
-    top: 100px;  
-    color: #8E5A37;
-    text-align: start;
-    margin-left: 12%;
-}
-
-.titulo h1{
-    font-family: "paso";
-    font-size: 60px;
-    margin-bottom: -10px;
-}
-
-.titulo h2{
-    font-family: "titulo";
-    font-size: 50px;
-}
-
-#miSeccion{
-    display: flex;
-    justify-content: center;
-    margin: 100px;
-}
-
-.card{
-    width: 20%;
-    margin: 50px;
-    border-radius: 60px 5px 5px 5px;
-    background: #ffffff;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    cursor: default;
-    transition: all 400ms ease;
-    margin-left: 50px;
-    margin-top: 70px;
-}
-.card:hover{
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
+    box-shadow: 0px 5px 15px 7px rgb(169, 169, 169);
 }
 
-.card img{
-    width:85%;
-    height: 200px;
-    border-radius: 60px 5px 5px 5px;
-    margin-left: 25px;
-    margin-top: 20px;
-}
-
- .card figure {
-    margin: 0;
-    padding: 0;
-}
-
-.card .contenido{
-    padding: 15px;
-    text-align: center;
-}
-
-.card .contenido p{
-    line-height: 1.5;
-    color: #6a6a6a;
-    text-align: justify;
-    margin-top: 70px;
-    font-family: "titulo";
-    color: #8E5A37;
-    font-size: 22px;
-}
-
-.card .contenido h3{
-     font-weight: 400;
-     margin-bottom: 15px;
-     float: left;
-     margin-top: 10px;
-     font-family: "titulo";
-     color: #8E5A37;
-}
-
-.card .contenido a{
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    margin-top: 10px;
-    color: #8E5A37;
-    border: 1px solid #8E5A37;;
-    border-radius: 4px;
-    transition: all 400ms ease;
-    margin-top: 50px;
-}
-
-.card .contenido a:hover{
-    background: #DCB43A;
-    color: #fff;
-}
-
-#miBotonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3%;
-}
-
-#miBoton {
-    color: #ffffff;
-    border-radius: 20px;
-    margin-top: -2%;
-    border-color: #000000;
-    background-color: #ef8420;
-}
-
-.texto-adicional {
-    background-image: url('/static/img/pie_pagina2.jpg');
-    padding: 12%;
+.contentContainer img{
     width: 100%;
-    text-align: center;
-    margin-top:0%; 
-    height: 80px;
-  }
-  
-  .logo2{
-    height: 250px;
-    margin-top: -10%;
-  }
+    height: 200px;
+    border-top-left-radius: 50px;
+}
+
+.contentContainer h6, p{
+    color: #8E5A37;
+    margin-top: 30px;
+    font-weight: bolder;
+}
+
+.contentContainer p{
+    margin-top: 15px;
+}
+
+.containerShow{
+    text-align: end;
+    margin-top: 40px;
+    width: 95%;
+}
+
+.containerShow a{
+    background-color: #ef8420;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;    
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.containerShow a:hover{
+    opacity: 1;
+    transition: all ease-in 0.2s;
+}
+
+@media (max-width:1300px) {
+    .containerBlog{
+        padding: 30px;
+    }
+}
+
+@media (max-width:900px) {
+    .containerBlog{
+        padding: 50px;
+    }
+    
+    .titleBlog h1{
+        font-size: 2em;
+    }
+
+    .titleBlog h2{
+        font-size: 2em;
+    }
+
+    .containerFirst{
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .contentContainer{
+        width: 100%;
+        margin-top: 60px;
+    }
+}

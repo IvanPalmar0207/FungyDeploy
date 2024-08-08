@@ -33,6 +33,7 @@ SECRET_KEY = 'django-insecure-zf(usi2b-vc!g#@@_d!trdq%-z2+k_r($7kkoxl!*tc2xap9v)
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'localhost',
     'web-production-6585.up.railway.app'
 ]
@@ -96,7 +97,11 @@ WSGI_APPLICATION = 'Proyecto_fungy.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(default = os.getenv('DATABASE_URL'))
+    #'default': dj_database_url.config(default = os.getenv('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 # Password validation

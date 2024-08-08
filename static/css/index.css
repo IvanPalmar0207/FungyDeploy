@@ -1,70 +1,54 @@
-
-.navbar {
-    background-image: url('/static/img/Recurso\ 2.png');
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    height: 200px;
+#img_fondo{
+    background-image: url('{% static "img/fondo_ventas.jpg" %}');
     background-repeat: no-repeat;
-  }
-  
-  .navbar.btn { 
-    display: block;
-    padding: 10px 10px;
-    text-decoration: none;
-  }
+    background-size: cover;
+    height: 100%;
 
-  .navbar a{
-    color: white;
-    font-size: 25px;
-  }
-  
-  .btn {
-    margin: 50px 1.5%;
-  }
-  
-  .navbar a:hover {
-    background-color: #000000;
-    border-radius: 20px;
-    color: rgb(255, 255, 255);
-  }
-  
-  .login,
-  .signup {
-    border-radius: 0px 0px 20px 20px;
-    color: #ffffff;
-    font-size: 20px;
-    transition-duration: 0.3s;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #8E5A37;
-    padding: 10px 10px;
-    margin: 20px 4%;
-  }
+}
 
-  .btnInicio{
+.containerUserName{
+    display: flex;
+    justify-content: end;
+    padding-right: 60px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: larger;
     color: #8E5A37;
-    margin-left: 5%;
-  }
+}
 
-  .carrito{
-    margin: 2%;
-  }
+.containerUserName span{
+    color: #ef8420;
+    margin-left: 1%;
+}
 
-  .bi-cart2{
-    color: white;
+.sideBar{
+    width: 4%;
+    top: 40%;
+    left: 96%;    
+    background-color: #ef8420;
+    position: fixed;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0.9;
+    transition: all;
+}
+
+.sideBar .iconNet{
     font-size: 30px;
-    cursor: pointer;
-  }
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: white;
+}
 
-  .logo{
-    border-radius: 100px;
-    height: 80%;
-  }
+.sideBar:hover{
+    background-color:#8E5A37;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
 
 .iconCarousel{
-    background-color: #ef8420;
+    background-color: #8E5A37;
     padding: 25px;
     border-radius: 50%;
 }
@@ -73,237 +57,114 @@
     padding: 20px;
 }
 
-  /* responsivo de la navbar */
+#miBoton{
+    background-color: #ef8420;    
+    color: white;
+    font-size: 60px;
+    border: none;
+    width: 5%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.contactanos{
+    margin-top: 2%;
+}
 
-  @media only screen and (min-width: 1600px) and (max-width: 1699px){
+.formMessage{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px;
+}
 
+.formMessage label{
+    display: block;
+    text-align: start;
+    color: #8E5A37;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 5%;
+}
 
-    .navbar.btn { 
-      display: block;
-      text-decoration: none;
-      margin: 5%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .navbar a{
-      color: white;
-      font-size: 19px;
-      margin: 2%; /* Ajusta este valor según tus necesidades */
+.containerForm{
+    margin-top: -80px;
+}
 
-    }
-    
-    .btnInicio{
-      color: #c77222;
-    }
-    
-    .carrito{
-      margin: 2%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .logo{
-      border-radius: 100px;
-      height: 60%;
-      margin-left: 1%;
-    }
-  }
+.contactanos{
+    text-align: center;
+    color: #8E5A37;
+    margin-top: 100px;
+    font-family: 'titulo';
+}
 
-  @media only screen and (min-width: 1500px) and (max-width: 1599px){
+.containerInput{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 
-    .navbar.btn { 
-      display: block;
-      text-decoration: none;
-      margin: 4%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .navbar a{
-      color: white;
-      font-size: 17px;
-      margin: 2%; /* Ajusta este valor según tus necesidades */
+.containerInput i{
+    color: #8E5A37;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2.5em;
+}
 
-    }
-    
-    .btnInicio{
-      color: #c77222;
+.containerInput .style{
+    width: 100%;
+    height: 100%;
+    padding-left: 3%;
+    margin-left: 3%;
+    border-left: 2px solid #8E5A37;
+    margin-top: 15px;
+}
 
-    }
-    
-    .carrito{
-      margin: 2%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .logo{
-      border-radius: 100px;
-      height: 60%;
-      margin-left: 1%;
-    }
-  }
+.style input{
+    width: 100%;
+    height: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #8E5A37;
+    background-color: transparent;
+    padding: 10px;
+}
 
-  @media only screen and (min-width: 1400px) and (max-width: 1499px){
+.containerInputs{
+    width: 40%;
+    padding: 50px;
+}
 
+.containerText{
+    width: 31%;
+    margin-top: 10px;
+}
 
-    .navbar.btn { 
-      display: block;
-      text-decoration: none;
-      margin: 5%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .navbar a{
-      color: white;
-      font-size: 16px;
-      margin: 2%; /* Ajusta este valor según tus necesidades */
+.containerText textarea{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 40px;
+    padding: 30px;
+}
 
-    }
-    
-    .btnInicio{
-      color: #c77222;
+.containerButton{
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 120px;
+}
 
-    }
-    
-    .carrito{
-      margin: 2%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .logo{
-      border-radius: 100px;
-      height: 60%;
-      margin-left: 1%;
-    }
-  }
+.containerButton input{
+    padding: 15px;
+    width: 8%;
+    border-radius: 30px;
+    border: none;
+    font-weight: bolder;
+    color: white;
+    background-color: #ef8420;
+}
 
-  @media only screen and (min-width: 1300px) and (max-width: 1399px){
-
-
-    .navbar.btn { 
-      display: block;
-      text-decoration: none;
-      margin: 5%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .navbar a{
-      color: white;
-      font-size: 13px;
-      margin: 2%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .btnInicio{
-      color: #c77222;
-
-    }
-    
-    .carrito{
-      margin: 2%; /* Ajusta este valor según tus necesidades */
-    }
-    
-    .logo{
-      border-radius: 100px;
-      height: 60%;
-      margin-left: 1%;
-    }
-    
-  
-  }
-
-  @media only screen and (min-width: 1200px) and (max-width: 1299px){
-
-    .navbar{
-      gap: -3px;
-    }
-
-    .navbar.btn { 
-      display: block;
-      text-decoration: none;
-    }
-  
-    .navbar a{
-      color: white;
-      font-size: 12px;
-      
-    }
-
-  
-    .btnInicio{
-      color: #c77222;
-      margin-left: 5%;
-    }
-  
-    .carrito{
-      margin: 2%;
-    }
-  
-  
-    .logo{
-      border-radius: 100px;
-      height: 60%;
-      margin-left: 1%;
-    }
-  }
-
-  @media only screen and (min-width: 1100px) and (max-width: 1199px){
-    .navbar{
-
-      height: 110px;
-    }
-
-    .navbar.btn { 
-      display: block;
-      text-decoration: none;
-    }
-  
-    .navbar a{
-      color: white;
-      font-size: 12px;
-      
-    }
-
-  
-    .btnInicio{
-      color: #c77222;
-      margin-left: 5%;
-    }
-  
-    .carrito{
-      margin: 2%;
-    }
-  
-  
-    .logo{
-      border-radius: 100px;
-      height: 60%;
-      margin-left: 1%;
-    }
-  }
-
-  @media only screen and (min-width: 1000px) and (max-width: 1099px){
-
-    .navbar{
-      gap: -3px;
-      height: 150px;
-    }
-
-    .navbar.btn { 
-      display: block;
-      text-decoration: none;
-    }
-  
-    .navbar a{
-      color: white;
-      font-size: 9px;
-      
-    }
-
-  
-    .btnInicio{
-      color: #c77222;
-      margin-left: 5%;
-    }
-  
-    .carrito{
-      margin: 2%;
-    }
-  
-  
-    .logo{
-      border-radius: 100px;
-      height: 60%;
-      margin-left: 1%;
-    }
-  }
+.containerButton input:hover{
+    transition: all ease-in 0.5s;
+    background-color: black;
+}
