@@ -1,0 +1,397 @@
+@font-face{
+    font-family: "mainTitles";
+    src: url("../fonts/The Constellation.ttf");
+}
+
+@font-face{
+    font-family: "subtitles";
+    src: url("../fonts/calibri-bold.ttf");
+}
+
+.containerUserName{
+    display: flex;
+    justify-content: end;
+    padding-right: 60px;
+    padding-top: 20px;
+    margin-bottom: -60px;
+    font-weight: bold;
+    font-size: larger;
+    color: #8E5A37;
+}
+.containerUserName span{
+    color: #ef8420;
+    margin-left: 1%;
+}
+
+.sideBar{
+    width: 4%;
+    top: 40%;
+    left: 96%;    
+    background-color: #ef8420;
+    position: fixed;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0.9;
+    transition: all;
+}
+
+.sideBar .iconNet{
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.sideBar:hover{
+    background-color:#8E5A37;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.containerGuideKit{
+    background-image: url('../img/backgroundMain.jpg');
+    padding: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.guideSubContainer h2{
+    text-align: center;
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.guideContainer .daysGuide{
+    text-align: center;
+    font-family: "mainTitles";
+    color: #8E5A37;
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
+.guideSubContainer span{
+    text-align: center;
+    font-family: "mainTitles";
+    color: #8E5A37;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.guideContainer p{
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.firstFarm{
+    margin-top: 50px;
+}
+
+.containerFirstGuide{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerFirstGuide h3{
+    text-align: start;
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.guideContainer{
+    width: 38%;
+}
+
+.guideContainer img{
+    width: 90%;
+    height: 100%;
+    border-top-left-radius: 50px;
+}
+
+.grownMush{
+    margin-top: 120px;
+    border-top: 2px solid #8E5A37;
+    padding-top: 60px;
+}
+
+.grownMush h3{
+    text-align: start;
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.containerIconGuide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.guideIcon{
+    width: 25%;
+    text-align: center;    
+    color: #8E5A37;
+}
+
+.guideIcon i{
+    font-size: 7rem;
+}
+
+.guideIcon h6{
+    font-family: "subtitles";
+    font-size: 1.3rem;    
+}
+
+.farmAndSteps{
+    display: flex;
+    justify-content: space-around;
+    background-image: url('../img/guideAndSteps.jpg');
+    padding: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.conatinerGuideSteps{
+    width: 40%;
+}
+
+.lineGuideSteps{
+    width: 50%;
+    border-right: 3px solid #8E5A37;
+    padding-right: 80px;
+}
+
+.conatinerGuideSteps h3{
+    text-align: center;
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stepsGuide{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.stepsGuide span{    
+    font-family: "mainTitles";
+    color: #8E5A37;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-right: 30px;   
+}
+
+.stepsGuide p{
+    text-align: justify;
+}
+
+.containerSuggestions{
+    background-image: url('../img/backgroundMain.jpg');
+    padding: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 120px;
+}
+
+.containerSuggestions h3{
+    text-align: center;
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.containerFirstSuggest{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestStep{
+    width: 40%;
+}
+
+.optionalSteps{
+    display: none;
+}
+
+.containerLastSteps{
+    margin-top: 40px;    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: start;
+}
+
+.lastSteps{        
+    width: 40%;    
+    text-align: center;    
+}
+
+.containerReactivate{ 
+    background-image: url('../img/backgroundMain.jpg');
+    padding: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerReactiveSub{
+    width: 40%;
+}
+
+.containerReactiveSub img{
+    width: 100%;
+}
+
+.containerReactiveSub h2{
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.containerReactiveSub p{
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.imageLine{
+    padding-right: 60px;
+    border-right: 3px solid #8E5A37;
+}
+
+@media (max-width: 1200px) {
+    .containerGuideKit{
+        padding: 40px;
+        padding-top: 70px;
+    }
+    .farmAndSteps{    
+        padding: 60px;
+        padding-top: 70px;
+    }
+    .containerSuggestions{
+        padding: 40px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .containerReactivate{
+        padding: 40px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 900px) {
+    .containerGuideKit{
+        padding: 40px;
+        padding-top: 70px;
+    }
+
+    .containerFirstGuide{
+        flex-direction: column;
+    }
+
+    .guideContainer{
+        width: 100%;
+    }
+
+    .guideContainer img{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .containerIconGuide{
+        flex-direction: column;        
+    }
+
+    .guideIcon{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .farmAndSteps{
+        flex-direction: column;        
+        padding: 60px;
+        padding-top: 70px;
+    }
+
+    .conatinerGuideSteps{
+        width: 100%;        
+    }    
+
+    .marginTopGuide{
+        margin-top: 50px;
+    }
+
+    .lineGuideSteps{        
+        border-right: 0px transparent;
+        padding-right: 0px;
+    }
+
+    .containerSuggestions{
+        padding: 40px;
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .containerFirstSuggest{
+        flex-direction: column;
+    }
+
+    .suggestStep{
+        width: 100%;
+    }
+
+    .containerLastSteps{
+        margin-top: 0px;
+    }
+
+    .lastSteps{
+        width: 100%;
+    }
+
+    .optionalSteps{
+        display: block;
+    }
+
+    .middleSteps{
+        display: none;
+    }
+
+    .containerReactivate{
+        flex-direction: column;
+    }
+    .containerReactivate{
+        padding: 40px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .containerReactiveSub{
+        width: 100%;
+    }
+    
+    .imageLine{
+        padding-right: 0px;
+        border-right: 0px transparent;
+    }
+
+    .containerReactiveSub h2{
+        margin-top: 50px;
+    }
+}

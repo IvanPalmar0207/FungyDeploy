@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
     <link rel="shortcut icon" href="{% static 'img/favIcon.jpg' %}" type="image/x-icon">
-    
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
     {% include 'navbar.html' %}
@@ -44,43 +44,45 @@
             </button>
         </div>
 
-        <div id="miBotonContainer">
-            <button id="miBoton"><i class="bi bi-arrow-down-circle-fill"></i></button>
-        </div>
-
-        <!-- Aquí está la sección que agregué -->
-        <div id="miSeccion" class="container" style="display: none">
-            <div class="card">
-                <figure>
-                    <img src="{% static 'img/producto1.png' %}" alt="plantas y muebles">
-                </figure>
-                <div class="contenido">
-                    <h3>NOMBRE DEL PRODUCTO</h3>
-                    <p>PRECIO DE ESTE PRODUCTO $$</p>
-                    <a href="{% url 'listar_productos' %}">Ver Más</a>
+        <div class="acordionProducts">
+            <div class="accordion" id="accordionExample">                
+                <div class="accordion-item itemAccordion">
+                  <h2 class="accordion-header">
+                    <button class = "buttonAcordion" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" >
+                        <i class="bi bi-arrow-down-circle-fill"></i>                        
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <h2 class="titleAccordion">Lo más destacado</h2>
+                      <div class="containerProductsAccor">
+                        {% for product in products %}
+                            <div class="itemContainer">
+                                <div class="containerImage">
+                                    <img src="{{product.imagen.url}}" alt="">
+                                </div>
+                                <div>
+                                    <h2>
+                                        {{product.nombre}}
+                                    </h2>
+                                </div>
+                                <div>
+                                    <h3>
+                                        Precio: {{product.precio}} COP
+                                    </h3>
+                                </div>
+                            </div>
+                        {% endfor %}
+                      </div>
+                      <div class="containerShowMore">
+                            <a href="listar_productos/">
+                                Ver Más
+                            </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="card">
-                <figure>
-                    <img src="{% static 'img/producto2.png' %}" alt="plantas y muebles">
-                </figure>
-                <div class="contenido">
-                    <h3>NOMBRE DEL PRODUCTO</h3>
-                    <p>PRECIO DE ESTE PRODUCTO $$</p>
-                    <a href="{% url 'listar_productos' %}">Ver Más</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <figure>
-                    <img src="{% static 'img/producto1.png' %}" alt="plantas y muebles">
-                </figure>
-                <div class="contenido">
-                    <h3>NOMBRE DEL PRODUCTO</h3>
-                    <p>PRECIO DE ESTE PRODUCTO $$</p>
-                    <a href="{% url 'listar_productos' %}">Ver Más</a>
-                </div>
-            </div>
+              </div>
         </div>
 
         <div class="sideBar">

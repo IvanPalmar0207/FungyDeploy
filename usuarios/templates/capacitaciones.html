@@ -21,13 +21,6 @@
   <body>
     {% include 'navbar.html' %} 
     
-    <div id="capacitaciones">
-      {% if request.user.is_authenticated%}
-        <div class="containerUserName">
-            <i class="bi bi-person-circle"></i><span>{{user.username | upper}}</span>
-        </div>
-      {% endif %} 
-    </div>
     <div class="sideBar">
       <div class="iconNet">
           <a href="https://www.facebook.com/TejidoFungi?mibextid=kFxxJD" target="_blank" rel="noopener noreferrer" class="iconNet"><i class="bi bi-facebook"></i></a>

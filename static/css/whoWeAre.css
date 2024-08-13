@@ -1,0 +1,226 @@
+@font-face{
+    font-family: "mainTitles";
+    src: url("../fonts/The Constellation.ttf");
+}
+
+@font-face{
+    font-family: "subtitles";
+    src: url("../fonts/calibri-bold.ttf");
+}
+
+
+.sideBar{
+    width: 4%;
+    top: 40%;
+    left: 96%;    
+    background-color: #ef8420;
+    position: fixed;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0.9;
+    transition: all;
+}
+
+.sideBar .iconNet{
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.sideBar:hover{
+    background-color:#8E5A37;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.containerImage{
+    width: 100%;
+}
+
+.containerImage img{
+    width: 100%;
+    height: auto;
+}
+
+.containerWhoText{
+    background-image: url('../img/backgroundMain.jpg');
+    padding: 120px;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.containerWhoText h1{
+    font-family: "subtitles";
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #8E5A37;
+}
+
+.containerText{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerText p{
+    text-align: justify;
+    padding-top: 30px;
+}
+
+.subContainerText{
+    width: 35%;
+}
+
+.subImg{
+    width: 40%;
+}
+
+.subContainerText img{
+    width: 100%;
+    height: auto;
+}
+
+.containerAllCards{
+    padding-top: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 130px;
+}
+
+.containerAllCards h2{
+    color: #8E5A37;
+    font-family: "subtitles";
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.containerTwoCards{
+    display: flex;
+    justify-content: space-evenly;        
+}
+
+.cardTeam{
+    background-image: url('../img/backTeamCard.png');
+    background-size: cover;
+    background-position: center;    
+    padding: 50px;        
+    width: 42%;    
+    margin-top: 100px;
+    border-top-left-radius: 180px;
+    box-shadow: 2px 0px 5px 3px rgb(232, 232, 232);
+}
+
+.cardTeam:hover{
+    transform: translateY(-3%);
+    transition: all ease-in 0.3s;       
+    box-shadow: 2px 0px 5px 3px rgb(202, 202, 202);
+}
+
+.cardTeam h3{
+    text-align: center;
+    margin-top: 60px;
+    font-family: "mainTitles";
+    color: #8E5A37;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.cardTeam p{
+    text-align: justify;
+    margin-top: 50px;
+}
+
+.cardTeam h6{
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+.imageCard{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    align-items: end;
+}
+
+.imageCard img{
+    width: 50%;
+    height: auto;
+}
+
+.containerIcons{
+    color: #8E5A37;
+    font-size: 1.8rem;
+}
+
+.containerIcons i{
+    margin-left: 10px;
+}
+
+@media (max-width: 1500px) {
+    .containerText p{
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .containerWhoText{
+        padding: 60px;
+    }
+        
+    .containerText{
+        flex-direction: column;
+    }
+
+    .containerText p{
+        padding-top: 0px;
+    }
+
+    .subContainerText{
+        width: 100%;
+    }
+
+    .subContainerText img{
+        margin-top: 50px;
+        height: auto;
+    }    
+}
+
+@media (max-width:900px) {
+    .containerAllCards{
+        padding: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }   
+
+    .containerTwoCards{
+        flex-direction: column;
+    }
+
+    .cardTeam{
+        width: 100%;        
+    }
+
+    .cardTeam h3{        
+        font-size: 1.7rem;
+    }
+
+    .imageCard{
+        align-items: end;
+    }
+
+    .imageCard img{
+        width: 60%;        
+    }
+
+    .containerIcons{
+        color: #8E5A37;
+        font-size: 1.2rem;
+    }
+}

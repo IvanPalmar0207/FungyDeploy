@@ -58,7 +58,7 @@
     opacity: 1;    
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) {    
     .optionsNav li{
         display: block;    
     }
@@ -66,5 +66,22 @@
     .optionsNav li a{
         font-size: medium;
         margin-left: 0px;
+    }    
+}
+
+@media (max-width: 700px) {
+    .navbarFungi{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }    
+    
+    .optionsNav{
+        margin-top: 20px;
+    }    
+
+    .navLogin{
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 }

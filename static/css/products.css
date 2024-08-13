@@ -1,0 +1,179 @@
+@font-face{
+    font-family: "mainTitles";
+    src: url("../fonts/The Constellation.ttf");
+}
+
+@font-face{
+    font-family: "subtitles";
+    src: url("../fonts/calibri-bold.ttf");
+}
+
+.sideBar{
+    width: 4%;
+    top: 40%;
+    left: 96%;    
+    background-color: #ef8420;
+    position: fixed;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0.9;
+    transition: all;
+}
+      
+.sideBar .iconNet{
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: white;
+}
+      
+.sideBar:hover{
+    background-color:#8E5A37;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.containerUserName{
+    display: flex;
+    justify-content: end;
+    margin-bottom: -30px;
+    font-weight: bold;
+    font-size: larger;
+    color: #8E5A37;
+}
+.containerUserName span{
+    color: #ef8420;
+    margin-left: 1%;
+}
+
+.sideBar{
+    width: 4%;
+    top: 40%;
+    left: 96%;    
+    background-color: #ef8420;
+    position: fixed;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0.9;
+    transition: all;
+}
+
+.sideBar .iconNet{
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.sideBar:hover{
+    background-color:#8E5A37;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+#img_fondos{
+    background-image: url('../img/backgroundMain.jpg');
+    padding: 50px;
+}
+
+.titleProducts{
+    text-align: center;
+    font-family: "subtitles";
+    color: #8E5A37;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.card{
+    padding: 20px;
+    box-shadow: 0px 5px 15px 7px rgb(197, 197, 197);
+    border-top-left-radius: 50px;
+}
+
+.card:hover{
+    transform: translateY(-3%);
+    transition: all ease-in-out 0.3s;
+    box-shadow: 0px 5px 15px 7px rgb(154, 154, 154);
+}
+
+.card img{
+    border-top-left-radius: 50px;
+    height: 200px;
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.cardInfo h2{
+    margin-top: 20px;
+    height: 70px;
+    color: #8E5A37;
+    font-family: "subtitles";
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.cardInfo p{
+    margin-top: 10px;
+    color: #8E5A37;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.containerButtons{
+    text-align: center;
+}
+
+.showMoreButton{
+    margin-top: 20px;
+    padding: 15px;    
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bolder;
+    color: white;
+    background-color: #ef8420;    
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.showMoreButton:hover{
+    transition: all ease-in-out 0.3s;
+    background-color: black;
+}
+
+@media (max-width: 1100px) {
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cardInfo h2{
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

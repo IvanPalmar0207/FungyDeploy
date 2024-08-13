@@ -92,7 +92,13 @@ def listar_productos(request):
 
 #Index View
 def index_view(request):
-    return render(request, 'index.html')
+    products = Producto.objects.all()[0:3]
+    
+    context = {
+        'products' : products
+    }
+    
+    return render(request, 'index.html', context)
 
 #EmailLogic
 def contactEmail(request):
