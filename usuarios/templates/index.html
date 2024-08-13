@@ -136,26 +136,46 @@
 
     {% include 'footerFungi.html' %}
 
-    <!--Validation-->
-    <script src="{% static 'js/validationIndex.js' %}"></script>
-    <!--CDN de SweetAlert-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.5/sweetalert2.all.min.js"></script>
-    <!--CDN de Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!--Window Script-->
-    <script src="{% static 'js/vennta.js' %}"></script>
-    <!--SweetAlert-->
-    {% if messages %}
-        {% for i in messages %}
-            <script>
-                Swal.fire({
-                    "title": "Felicitaciones",
-                    "text" : "{{i}}",
-                    "icon" : "success",
-                    "confirmButtonColor" : " #93ca00"
-                })
-            </script>                
-        {% endfor %}
-    {% endif %}
 </body>
+   <!--Validation-->
+   <script src="{% static 'js/validationIndex.js' %}"></script>
+   <!--CDN de SweetAlert-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.5/sweetalert2.all.min.js"></script>
+   <!--CDN de Bootstrap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <!--Window Script-->
+   <script src="{% static 'js/vennta.js' %}"></script>
+   <!--SweetAlert-->
+   {% for i in messages %}
+   {% if i.tags == 'success' %}
+       <script>
+           Swal.fire({
+               icon: 'success',
+               title: 'Felicidades',
+               text: '{{i}}',
+               confirmButtonText: "Siguiente",
+               allowEnterKey:true,
+               allowOutsideClick:false,
+               confirmButtonColor:"#4db600",
+               allowEscapeKey : false,
+               }
+           )
+       </script>
+   {% else %}
+       <script>
+           Swal.fire({
+               icon: 'info',
+               title: 'Opss...',
+               text: '{{i}}',
+               confirmButtonText: "Siguiente",
+               allowEnterKey:true,
+               confirmButtonColor:"#00b6a0",
+               allowOutsideClick : false,
+               allowEscapeKey : false
+               }
+           )
+       </script>
+   {% endif %}
+{% endfor %}
+
 </html>

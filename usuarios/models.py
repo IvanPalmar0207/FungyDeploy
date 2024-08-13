@@ -22,14 +22,3 @@ class Producto(models.Model):
 
     def __str__(self):
         return self.nombre
-    
-    
-class Usuario(models.Model):
-    nombre = models.CharField(max_length=255)
-    correo = models.EmailField(unique=True)
-    direccion = models.CharField(max_length=255)
-    celular = models.CharField(max_length=15)
-    contrasena = models.CharField(max_length=255)
-
-class Meta:
-    db_table = 'usuarios'

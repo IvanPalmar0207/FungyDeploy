@@ -3,10 +3,10 @@ from django.shortcuts import render, redirect
 from django.shortcuts import render, redirect
 from django.shortcuts import render, redirect
 #Data Models
-from usuarios.models import Producto, Usuario
+from usuarios.models import Producto
 #Authentification
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
+from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib.auth.models import User
 #Email Message
@@ -20,9 +20,32 @@ import sweetify
 #Messages
 from django.contrib import messages
 
+#Render Login
+def loginRender(request):
+    return render(request, 'login.html')
+
+#Login Page
+def loginUser(request):
+    if request.method == 'POST':
+        userName = request.POST['userName']
+        userPassword = request.POST['userPassword']
+        
+        logUser = authenticate(username = userName, password = userPassword)
+        
+        if logUser:
+            login(request, logUser)                                
+            messages.success(request, 'Has iniciado sesión correctamente')
+            return redirect('/')
+        else:
+            messages.error(request, 'No se ha encontrado el usuario, intenta nuevamente.')
+            return redirect('/')
+
+#Render Register
+def registerRender(request):
+    return render(request, 'register.html')
 
 #Register Page
-def registro(request):
+def register(request):
 
     if request.method == 'POST':
         firstName = request.POST['firstName']    
@@ -31,59 +54,30 @@ def registro(request):
         userEmail = request.POST['userEmail']
         userPassword = request.POST['userPassword']        
         userConfirm = request.POST['userConfirm']
-        hashed_pwd = make_password(userPassword)
-
-        #Pattern password
-        patternPassword = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
-        validationPassword = re.match(patternPassword,userPassword)
-
-        #Pattern email
-        patternEmail = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
-        validationEmail = re.fullmatch(patternEmail, userEmail)
-        
-        #Validation firstName 
-        if(len(firstName) > 60 or len(firstName) < 8):
-            sweetify.error(request, 'El nombre no puede tener más de 60 caracteres ni menos de 8 caracteres, por favor intenta nuevamente')  
-
-        elif(firstName.isdigit()):
-            sweetify.error(request, 'El nombre no puede contener numeros, intenta nuevamente')        
-
-        #Validation lastName
-        elif(len(lastName) > 60 or len(firstName) < 10):
-            sweetify.error(request, 'El apellido no puede tener más de 60 caracteres ni menos de 10 caracteres, por favor intenta nuevamente')        
-        
-        elif(lastName.isdigit()):  
-            sweetify.error(request, 'El apellido no puede contener numeros, intenta nuevamente')  
-
-        #Validation userName
-        elif(len(userName) > 100 or len(firstName) < 10):
-            sweetify.error(request, 'El nombre de usuario no puede tener más de 100 caracteres ni menos de 10 caracteres, por favor intenta nuevamente')        
-        
-        #Validation Email
-        elif(len(userEmail) > 100 or len(userEmail) < 10):
-            sweetify.error(request, 'El correo electronico no puede tener más de 100 caracteres ni menos de 10 caracteres, por favor intenta nuevamente')                        
-
-        elif(bool(validationEmail) == False):
-            sweetify.error(request, 'El correo es incorrecto, ingresa un correo valido')                
-
-        #Validation Password 
-        elif(len(userPassword) > 16 or len(userPassword) < 8):
-            sweetify.error(request, 'La contraseña no puede tener más de 16 caracteres ni menos de 8 caracteres, por favor intenta nuevamente')                    
-        
-        elif(bool(validationPassword) == False):
-            sweetify.error(request, 'La contraseña debe contener una letra mayuscula, una letra minuscula y almenos un digito')        
-        
-        elif(userConfirm != userPassword):
-            sweetify.error(request, 'Las contraseñas son diferentes, por favor ingresalas nuevamente')        
-
+        hashed_pwd = make_password(userPassword)                    
+                
         #Save User
-        else:
-            newUser = User.objects.create(first_name = firstName, last_name = lastName, username = userName, email = userEmail, password = hashed_pwd )
-            newUser.save()
-            sweetify.success(request, 'Te has registrado correctamente')        
-    else:
-        sweetify.info (request, 'Bienvenido al formulario de registro')
-    return render(request, 'register.html')
+        try:            
+            if User.objects.filter(username = userName):
+                messages.error(request, 'El usuario ya existe dentro del sistema, intenta nuevamente.')
+                return redirect('/')                    
+            
+            elif User.objects.filter(email = userEmail):
+                messages.error(request, 'El usuario ya existe dentro del sistema, intenta nuevamente.')
+                return redirect('/')                    
+            
+            elif User.objects.filter(password = hashed_pwd):
+                messages.error(request, 'El usuario ya existe dentro del sistema, intenta nuevamente.')
+                return redirect('/')                    
+            
+            else:
+                newUser = User.objects.create(first_name = firstName, last_name = lastName, username = userName, email = userEmail, password = hashed_pwd )
+                newUser.save()
+                messages.success(request, 'Te has registrado correctamente.')
+                return redirect('/')
+        except Exception:
+            messages.error(request, 'No ha sido posible registrarte dentro del sistema, intenta nuevamente.')
+            return redirect('/')                
 
 #Product's List
 def listar_productos(request):
@@ -101,6 +95,7 @@ def index_view(request):
     return render(request, 'index.html', context)
 
 #EmailLogic
+@login_required
 def contactEmail(request):
     if request.method == 'POST':
         contactFullName = request.POST['contactFullName']

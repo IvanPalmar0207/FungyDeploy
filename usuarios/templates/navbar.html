@@ -7,24 +7,39 @@
         <img class="logo" src="{% static 'img/logo1.1.svg' %}" alt="logo">
     </div>
     <ul class="optionsNav">
-        <li>
-            <a href="{% url 'index' %}" class="btn Inicio">Inicio</a>
-        </li>
-        <li>
-            <a href="{% url 'listar_productos' %}" class="btn">Productos</a>
-        </li>
-        <li>
-            <a href="{% url 'paso_paso' %}" class="btn">Paso a paso</a>
-        </li>
-        <li>
-            <a href="{% url 'capacitaciones' %}" class="btn">Capacitaciones</a>
-        </li>
-        <li>
-            <a href="{% url 'conocenos' %}" class="btn">Conocenos</a>
-        </li>    
-        <li>
-            <a href="{% url 'blog' %}" class="btn">Blog</a>
-        </li>
+        {% if  request.user.is_superuser%}
+            <li>
+                <a href="{% url 'index' %}" class="btn Inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'index' %}" class="btn Inicio">Gestión de Usuarios</a>
+            </li>
+            <li>
+                <a href="{% url 'listar_productos' %}" class="btn">Gestión de Productos</a>
+            </li>
+            <li>
+                <a href="{% url 'blog' %}" class="btn">Blog</a>
+            </li>
+        {% else %}
+            <li>
+                <a href="{% url 'index' %}" class="btn Inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'listar_productos' %}" class="btn">Productos</a>
+            </li>
+            <li>
+                <a href="{% url 'paso_paso' %}" class="btn">Paso a paso</a>
+            </li>
+            <li>
+                <a href="{% url 'capacitaciones' %}" class="btn">Capacitaciones</a>
+            </li>
+            <li>
+                <a href="{% url 'conocenos' %}" class="btn">Conocenos</a>
+            </li>    
+            <li>
+                <a href="{% url 'blog' %}" class="btn">Blog</a>
+            </li>
+        {% endif %}
     </ul>
     <div class="navLogin">
         {% if request.user.is_authenticated %}
@@ -33,7 +48,7 @@
         </li>
         {% else %}
         <li>
-            <a href="{% url 'login' %}" class="login">Ingresar</a> 
+           <a href="{% url 'login' %}" class="login">Ingresar</a>
         </li>
         {% endif %}
     </div>    

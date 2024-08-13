@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "paso";
+    src: url("../fonts/The Constellation.ttf");
+}
+
+@font-face{
+    font-family: "titulo";
+    src: url("../fonts/calibri-bold.ttf");
+}
+
+.containerMainLogin{
+    display: flex;
+    justify-content: center;
+}
+
+.containerForm{
+    width: 50%;
+    background-image: url('../img/backgroundMain.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+.imageMush{
+    width: 100%;
+    height: auto;
+}
+
+.containerimageAside{
+    width: 50%;
+}
+
+.containerimageAside img{
+    width: 100%;
+    height: 100%;
+}
+
+.formLog{
+    background-color: rgb(238, 238, 238);
+    border-top-left-radius: 80px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px rgb(213, 213, 213);
+    padding: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 0px;
+}
+
+.titleFormLog{
+    color: #8E5A37;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+
+.formLog label{
+    display: block;
+    text-align: start;
+    color: #8E5A37;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.formLog input{
+    width: 92%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #8E5A37;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.inputOptions{
+    border-left: 2px solid #8E5A37;
+    margin-top: 20px;
+    overflow: visible;
+}
+
+.containerButtons{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #8E5A37;
+    margin-top: 50px;
+    width: 110%;
+    margin-left: -6%;
+}
+
+.logGoogle{
+    width: 70%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.bi-google{
+    margin-right: 10%;
+    font-size: 20px;
+}
+
+.logIn{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 50px;    
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    transition-duration: 0.3s;
+    cursor: pointer;    
+    background-color: #ef8420;
+    font-weight: bold;
+    font-size: large;
+}
+
+.bottonLog:hover{
+  background-color: black;
+  color: white;
+  transition: all ease 0.3s;
+}
+
+.noCredentials{
+    margin-top: 20px;
+}
+
+.noCredentials a{
+    color: rgb(100, 11, 11);
+    font-size: large;
+    text-decoration: none;
+}
+
+.noCredentials a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .containerimageAside{
+        display: none;
+    }
+
+    .containerForm{
+        width: 100%;        
+        padding: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-image: url('../img/backgroundMain.jpg');
+    }
+
+    .formLog{
+        width: 90%;
+        padding: 50px;
+    }
+}
+

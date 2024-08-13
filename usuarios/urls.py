@@ -4,9 +4,12 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
-    path('register/', views.registro, name='register'),
+urlpatterns = [    
     path('', views.index_view, name='index'),
+    path('login/', views.loginRender, name = 'login'),
+    path('logUser/', views.loginUser, name = 'logUser'),
+    path('register/', views.registerRender, name='register'),
+    path('registerNewUser/', views.register, name = 'RegisterUser'),
     path('paso_paso', views.paso_paso_view, name='paso_paso'),
     path('capacitaciones', views.capacitaciones_view, name='capacitaciones'),
     path('conocenos', views.conocenos_view, name='conocenos'),
