@@ -1,0 +1,186 @@
+@font-face{
+    font-family: "mainTitles";
+    src: url("/static/fonts/The\ Constellation.ttf");
+}
+
+@font-face{
+    font-family: "subtitles";
+    src: url("/static/fonts/calibri-bold.ttf");
+}
+
+.containerUsers{
+    padding: 80px;
+}
+
+.containerGoBack{
+    width: 100%;
+    font-size: 35px;    
+    font-optical-sizing: auto;
+    text-decoration: underline;
+    font-weight: bold;
+    color:#ef8420;
+    text-decoration: none;
+}
+
+.containerGoBack:hover{
+    text-decoration: underline;
+    transition: all ease-in 0.3s;
+}
+
+.containerGoBack a{
+    text-decoration: none;
+    color: #ef8420;
+}
+
+.containerGoBack:hover i{
+    color: black;
+    transition: all ease-in-out 0.3s;
+}
+
+
+.titleUsers{
+    text-align: center;
+    margin-top: 30px;
+    color: #8E5A37;
+    font-weight: bold;
+    font-family: "subtitles";
+    font-size: 1.1rem;
+}
+
+.contextPage{
+    margin-top: 40px;        
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.containerRegisterForm{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerForm{
+    width: 50%;        
+    padding: 80px;
+}
+
+.formLog{
+    background-color: rgb(238, 238, 238);
+    border-top-left-radius: 80px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px rgb(213, 213, 213);
+    padding: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 0px;
+}
+
+.titleFormLog{
+    color: #8E5A37;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.formLog label{
+    display: block;
+    text-align: start;
+    color: #8E5A37;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.formLog input{
+    width: 92%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #8E5A37;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.inputOptions{
+    border-left: 2px solid #8E5A37;
+    margin-top: 20px;
+    overflow: visible;
+}
+
+.containerButtons{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #8E5A37;
+    margin-top: 50px;
+    width: 110%;
+    margin-left: -6%;
+}
+
+.logGoogle{
+    width: 70%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.bi-google{
+    margin-right: 10%;
+    font-size: 20px;
+}
+
+.logIn{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 50px;    
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    transition-duration: 0.3s;
+    cursor: pointer;    
+    background-color: #ef8420;
+    font-weight: bold;
+    font-size: large;
+}
+
+.bottonLog:hover{
+  background-color: black;
+  color: white;
+  transition: all ease 0.3s;
+}
+
+@media (max-width: 900px) {
+    .containerUsers{
+        padding: 30px;
+    }
+
+    .titleUsers{
+        font-size: small;
+    }
+
+    .contextPage{
+        font-size: 1rem;
+    }        
+
+    .containerimageAside{
+        display: none;
+    }    
+
+    .containerForm{
+        width: 100%;        
+        padding: 15px;
+        padding-left: 0px;
+        padding-right: 0px;        
+    }
+
+    .formLog{
+        width: 100%;
+        padding: 50px;
+    }
+
+}
