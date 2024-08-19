@@ -35,7 +35,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'web-production-6585.up.railway.app'
+    'web-production-6585.up.railway.app',
+    'www.tejidofungi.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
