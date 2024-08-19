@@ -41,8 +41,8 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'http://*',
-    'https://web-production-6585.up.railway.app',
-    'https://www.tejidofungi.com/'
+    'https://web-production-6585.up.railway.app',    
+    'https://www.tejidofungi.com'
 ]
 
 # Application definition
