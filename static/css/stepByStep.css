@@ -233,6 +233,13 @@
     border-right: 3px solid #8E5A37;
 }
 
+@media (min-width: 2000px) {
+    .guideContainer img{
+        width: 75%;
+        height: 450px;
+    }
+}
+
 @media (max-width: 1200px) {
     .containerGuideKit{
         padding: 40px;
