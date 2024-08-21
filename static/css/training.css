@@ -62,8 +62,25 @@
 .cardTraining h6{
     color: #8E5A37;
     font-family: "subtitles";
-    font-size: 1.2em;
-    margin-top: 30px;
+    font-size: 1.2em;    
+}
+
+.contactTraining{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;;
+}
+
+.contactTraining i{
+    font-size: 1.4rem;
+    color: #8E5A37;
+}
+
+.contactTraining i:hover{
+    color: black;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
 }
 
 .containerEvents{

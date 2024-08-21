@@ -355,7 +355,7 @@ def renderUpdateProduct(request, id):
             'categories' : categories
         }
         
-        return render(request, 'admin/Products/updateUsers.html', context)
+        return render(request, 'admin/Products/updateProducts.html', context)
         
     else:
         messages.error(request, 'No tienes los permisos correspondientes.')

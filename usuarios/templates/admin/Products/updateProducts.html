@@ -77,8 +77,10 @@
                    <label for="categorieProduct">Categoria del Producto:</label>
    
                    <div class="inputOptions noBorder">
-                       <select name="categorieProduct" id="categorieProduct">
-                            <option value="{{product.categoria.id}}">{{product.categoria.nombre}}</option>
+                        <div class="currentCategorie">
+                            <p>* La categoría actual es: <span>{{product.categoria}}</span></p>
+                        </div>
+                       <select name="categorieProduct" id="categorieProduct">                            
                             {% for categorie in categories %}
                                 <option value="{{categorie.id}}">{{categorie.nombre}}</option>
                             {% endfor %}
