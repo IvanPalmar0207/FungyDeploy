@@ -38,6 +38,19 @@
     padding-top: 60px;
 }
 
+.carousel-inner{
+    text-align: center;
+}
+
+.carousel-inner{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.carousel-item img, video{        
+    height: 600px;    
+}
+
 .acordionProducts{
     padding: 50px;
     padding-top: 30px;
@@ -256,5 +269,14 @@
 
     .containerProductsAccor .itemContainer{
         width: 100%;
+    }
+
+    .carousel-inner{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .carousel-item img, video{        
+        height: 200px;    
     }
 }
