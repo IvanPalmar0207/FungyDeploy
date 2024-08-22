@@ -25,7 +25,7 @@
                 <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
                 <div class="cardInfo">
                     <h2>{{ producto.nombre }}</h2>
-                    <p>{{ producto.categoria }}</p>
+                    <p>{{ producto.categoria.nombre }}</p>
                     <p>$ {{ producto.precio }} COP</p>     
                     <div class="containerButtons">
                         {% if request.user.is_authenticated %}
