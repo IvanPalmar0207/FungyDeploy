@@ -82,7 +82,12 @@ def register(request):
 #Product's List
 def listar_productos(request):
     productos = Producto.objects.all()
-    return render(request, 'listar_productos.html', {'productos': productos})
+    
+    context = {
+        'productos' : productos
+    }
+    
+    return render(request, 'listar_productos.html', context)
 
 #Index View
 def index_view(request):
