@@ -81,7 +81,7 @@ def register(request):
 
 #Product's List
 def listar_productos(request):
-    productos = Producto.objects.all()
+    productos = Producto.objects.select_related('categoria').all()
     
     context = {
         'productos' : productos
@@ -296,7 +296,7 @@ def deleteUsers(request, id):
 @login_required
 def manageProducts(request):
     if request.user.is_superuser:
-        products = Producto.objects.all()                
+        products = Producto.objects.select_related('categoria').all()
         
         context = {
             'products' : products
