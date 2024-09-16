@@ -7,7 +7,7 @@ function validate(){
     var patternPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
 
 
-    if(userName.lenght > 60 || userName.lenght < 8){
+    if(userName.length > 60 || userName.length < 8){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -21,7 +21,7 @@ function validate(){
         return false  
     }
 
-    else if(password.lenght > 16 || password.lenght < 8){
+    else if(password.length > 16 || password.length < 8){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',

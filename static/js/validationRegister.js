@@ -14,6 +14,7 @@ function validateRegister(){
     let patternEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
     let patternPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
 
+    
     if(firstName.length > 60 || firstName.length < 8){
         Swal.fire({
             icon: 'error',

@@ -51,7 +51,7 @@ function validateNewProduct(){
         return false 
     }
 
-    else if(descriptionProduct.length < 5 || descriptionProduct > 150){
+    else if(descriptionProduct.length < 5 || descriptionProduct.length > 150){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
