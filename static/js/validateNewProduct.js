@@ -10,11 +10,11 @@ function validateNewProduct(){
 
     let mayusculas = /[A-Z]/g    
 
-    if(productName.length < 5 || productName.length > 100){
+    if(productName.length < 5){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'El nombre del producto no puede tener menos de 5 caracteres ni más de 100 caracteres, intenta nuevamente.',
+            text: 'El nombre del producto no puede tener menos de 5 caracteres, intenta nuevamente.',
             confirmButtonText: "Volver",
             allowEnterKey:true,
             allowOutsideClick:false,

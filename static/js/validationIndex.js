@@ -18,11 +18,11 @@ function validate(){
     let patternEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
 
-    if(contactFullName.length > 70 || contactFullName.length < 7){
+    if(contactFullName.length < 5){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'El nombre completo no puede tener mas de 70 caracteres ni menos de 7 caracteres, por favor intenta nuevamente',
+            text: 'El nombre completo no puede tener menos de 5 caracteres, por favor intenta nuevamente',
             confirmButtonText: "Volver",
             allowEnterKey:true,
             allowOutsideClick:false,
@@ -46,11 +46,11 @@ function validate(){
         return false          
     }
 
-    else if(emailContact.length > 100 || emailContact.length < 10){
+    else if(emailContact.length < 5){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'El correo electronico no puede tener mas de 100 caracteres ni menos de 10 caracteres, por intenta nuevamente',
+            text: 'El correo electronico no puede tener menos de 5 caracteres, por intenta nuevamente',
             confirmButtonText: "Volver",
             allowEnterKey:true,
             allowOutsideClick:false,

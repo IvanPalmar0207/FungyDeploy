@@ -15,11 +15,11 @@ function validateRegister(){
     let patternPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
 
     
-    if(firstName.length > 60 || firstName.length < 8){
+    if(firstName.length < 5){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'El nombre no puede tener más de 60 caracteres, intenta nuevamente.',
+            text: 'El nombre no puede tener menos de 5 caracteres, intenta nuevamente.',
             confirmButtonText: "Reenviar",
             allowEnterKey:true,
             allowOutsideClick:false,
@@ -43,11 +43,11 @@ function validateRegister(){
         return false
    }
 
-   else if(lastName.length > 60 || lastName.length < 10){
+   else if(lastName.length < 5){
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'El apellido no puede tener más de 60 caracteres ni menos de 10 caracteres, intenta nuevamente.',
+        text: 'El apellido no puede tener menos de 5 caracteres, intenta nuevamente.',
         confirmButtonText: "Reenviar",
         allowEnterKey:true,
         allowOutsideClick:false,
@@ -71,11 +71,11 @@ function validateRegister(){
         return false
    }
 
-   else if(userName.length > 100 || userName.length < 10){
+   else if(userName.length < 5){
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'El nombre de usuario no puede tener más de 100 caracteres ni menos de 10 caracteres, intenta nuevamente.',
+        text: 'El nombre de usuario no puede tener menos de 5 caracteres, intenta nuevamente.',
         confirmButtonText: "Reenviar",
         allowEnterKey:true,
         allowOutsideClick:false,
@@ -85,11 +85,11 @@ function validateRegister(){
         return false
    }
 
-   else if(userEmail.length > 100 || userEmail.length < 10){
+   else if(userEmail.length < 5){
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'El correo electronico no puede tener más de 100 caracteres uu menos de 10 caracteres, intenta nuevamente.',
+        text: 'El correo electronico no puede tener menos de 5 caracteres, intenta nuevamente.',
         confirmButtonText: "Reenviar",
         allowEnterKey:true,
         allowOutsideClick:false,

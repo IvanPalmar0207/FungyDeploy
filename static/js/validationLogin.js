@@ -7,11 +7,11 @@ function validate(){
     var patternPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
 
 
-    if(userName.length > 60 || userName.length < 8){
+    if(userName.length < 5){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'El nombre de usuario no puede tener mas de 60 caracteres ni menos de 8 caracteres, intenta nuevamente',
+            text: 'El nombre de usuario no puede tener menos de 5 caracteres, intenta nuevamente',
             confirmButtonText: "Reenviar",
             allowEnterKey:true,
             allowOutsideClick:false,
